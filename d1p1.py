@@ -1,15 +1,18 @@
-import aoc23_modules
-import d1_modules
+##############################################
+                ## PART 2 ##
+##############################################
 
-eData = open('AOC23\\D1_QData.txt')
+import modules.parser
+import d1modules.d1mod
+
 qData = open('AOC23\\D1_ExampleData.txt')
 e2Data = ['3oner4two', 'nxdthreefourfive']
 
-d1p1Data = aoc23_modules.parseData(eData, 'string')
-parsedData = d1_modules.q1_findInts(d1p1Data)
-parsedInts = d1_modules.q1_sumInts(parsedData)
+eData = 'C:\\Users\\Chris\\Documents\\_Coding\\Python\\AOC23\\Advent23\\D1_QData.txt'
+d1p1Data = modules.parser.parseData(eData, 'string')
+parsedData = d1modules.d1mod.q1_findInts(d1p1Data)
+parsedInts = d1modules.d1mod.q1_sumInts(parsedData)
 print(parsedInts)
-
 
 ##################
 ## non function ##

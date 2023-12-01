@@ -1,6 +1,7 @@
 
 #find integers.
 def q1_findInts(parsedList):
+    nonInt = 0
     foundInts = []
     for items in parsedList:
         tempInts = ''
@@ -10,7 +11,8 @@ def q1_findInts(parsedList):
                 #print("Item as integer:", itemInt)
                 tempInts += item
             except:
-                print("Item cannot be converted to an integer.")
+                nonInt += 1
+                #print("Item cannot be converted to an integer.")
         if len(tempInts) > 0:
             sortedInts = tempInts[0] + tempInts[-1]
             foundInts.append(sortedInts)
