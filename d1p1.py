@@ -1,14 +1,14 @@
 ##############################################
-                ## PART 2 ##
+                ## PART 1 ##
 ##############################################
 
 import modules.parser
 import d1modules.d1mod
 
-qData = open('AOC23\\D1_ExampleData.txt')
-e2Data = ['3oner4two', 'nxdthreefourfive']
+eData = open('AOC23\\D1_ExampleData.txt')
+eTest = ['3oner4two', 'nxdthreefourfive']
 
-eData = 'C:\\Users\\Chris\\Documents\\_Coding\\Python\\AOC23\\Advent23\\D1_QData.txt'
+qData = 'C:\\Users\\Chris\\Documents\\_Coding\\Python\\AOC23\\Advent23\\D1_QData.txt'
 d1p1Data = modules.parser.parseData(eData, 'string')
 parsedData = d1modules.d1mod.q1_findInts(d1p1Data)
 parsedInts = d1modules.d1mod.q1_sumInts(parsedData)
@@ -20,12 +20,12 @@ print(parsedInts)
 
 # single list - combined into function? [x]
 eList = []
-for item in eData:    
+for item in qData:    
     eList.append(item.strip())
 
 #list of lists - combined into function? [x]
 eList = []
-for item in eData:   
+for item in qData:   
     eList.append(item.splitlines())
 
 #find int, combine, and add to list - # single list - combined into function? [x]

@@ -4,10 +4,10 @@
 
 import modules.parser
 
-eData = open('C:\\Users\\Chris\\Documents\\_Coding\\Python\\AOC23\\Advent23\\D1_QData.txt')
+qData = open('C:\\Users\\Chris\\Documents\\_Coding\\Python\\AOC23\\Advent23\\D1_QData.txt')
 #eData = open('AOC23\\D1_ExampleData.txt')
 eList = []
-for item in eData:    
+for item in qData:    
     eList.append(item.strip())
 
 eStrings = ['one','two','three','four','five','six','seven','eight','nine']
@@ -100,17 +100,17 @@ print(eStrintSum)
 eStrints1 = []
 tempStrint = []
 for string in eStrings:
-    if string in eData[0]:
+    if string in qData[0]:
         #print(string)
         strintVal = str(eStrings.index(string) + 1)
         #print(strintVal)
-        indexVal = eData[0].index(string)
+        indexVal = qData[0].index(string)
         tempStrint += [[strintVal, indexVal]]
-for items in eData[0]:
+for items in qData[0]:
     try:
         itemInt = int(items)
         #print("Item as integer:", itemInt)
-        indexVal = eData[0].index(items)
+        indexVal = qData[0].index(items)
         tempStrint += [[items, indexVal]]
     except:
         print("Item cannot be converted to an integer.")
