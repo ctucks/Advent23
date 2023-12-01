@@ -1,84 +1,4 @@
 
-
-def parseData(fileName, splitType='string'):
-    parseFile = open(fileName)
-    parsedList = []
-    if splitType == 'string':
-        for item in parseFile:   
-            parsedList.append(item.strip())
-    elif splitType == 'list':
-        for item in parseFile:
-            parsedList.append(item.splitlines())
-    else:
-        print("""Please enter a valid splitType ('string' or 'list')""")
-    return parsedList
-
-def q1_findInts(parsedList):
-    foundInts = []
-    for items in parsedList:
-        tempInts = ''
-        for item in items:
-            try:
-                itemInt = int(item)
-                #print("Item as integer:", itemInt)
-                tempInts += item
-            except:
-                print("Item cannot be converted to an integer.")
-        if len(tempInts) > 0:
-            sortedInts = tempInts[0] + tempInts[-1]
-            foundInts.append(sortedInts)
-    return foundInts
-
-def q1_sumInts(foundInts):
-    intSum = 0
-    for item in eInts:
-        intSum += int(item)
-    return intSum
-
-
-
-
-eData = open('AOC23\\D1_QData.txt')
-qData = open('AOC23\\D1_ExampleData.txt')
-e2Data = ['3oner4two', 'nxdthreefourfive']
-
-#1abc2
-#pqr3stu8vwx
-#a1b2c3d4e5f
-#treb7uchet
-
-# single list.
-eList = []
-for item in eData:    
-    eList.append(item.strip())
-
-#list of lists.
-eList = []
-for item in eData:   
-    eList.append(item.splitlines())
-
-#find int, combine, and add to list.
-eInts = []
-for items in eList:
-    tempInts = ''
-    for item in items:
-        try:
-            itemInt = int(item)
-            #print("Item as integer:", itemInt)
-            tempInts += item
-        except:
-            print("Item cannot be converted to an integer.")
-    if len(tempInts) >= 2:
-        sortedInts = tempInts[0] + tempInts[-1]
-        eInts.append(sortedInts)
-    elif len(tempInts) == 1:
-        eInts.append(tempInts)
-
-#find sum of ints in list.
-eSum = 0
-for item in eInts:
-    eSum += int(item)
-
 eStrints = []
 eStrings = ['one','two','three','four','five','six','seven','eight','nine']
 for items in eList:
@@ -134,21 +54,6 @@ if len(tempStrint) >= 2:
 eStrints1Sum = ''
 eStrints1Sum += eStrints1[0][0]
 eStrints1Sum += eStrints1[-1][0]
-
-##############################################
-## PART 2 ##
-##############################################
-
-eData = open('AOC23\\D1_QData.txt')
-#eData = open('AOC23\\D1_ExampleData.txt')
-eList = []
-for item in eData:    
-    eList.append(item.strip())
-
-eStrings = ['one','two','three','four','five','six','seven','eight','nine']
-noMatch = 0
-totalSum = 0
-curIndex = 0
 
 #newList = []
 #for items in eList:
