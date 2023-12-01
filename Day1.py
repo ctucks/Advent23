@@ -149,22 +149,39 @@ eStrings = ['one','two','three','four','five','six','seven','eight','nine']
 noMatch = 0
 totalSum = 0
 curIndex = 0
-newList = []
-for items in eList:
-    #eStrints1 = []
-    #tempStrint = []
-    for string in eStrings:
-        if string in items:
-            print(items)
-            #print(string)
-            modItem = items.replace(string, str(eStrings.index(string) + 1))
-            items = modItem
-            #strintVal = str(eStrings.index(string) + 1)
-            #print(strintVal)
-            #indexVal = items.index(string)
-            #tempStrint += [[strintVal, indexVal]]
-    newList.append(items)
-    curIndex += 1
+
+#newList = []
+#for items in eList:
+#    #eStrints1 = []
+#    #tempStrint = []
+#    for string in eStrings:
+#        if string in items:
+#            print(items)
+#            #print(string)
+#            modItem = items.replace(string, str(eStrings.index(string) + 1))
+#            items = modItem
+#            #strintVal = str(eStrings.index(string) + 1)
+#            #print(strintVal)
+#            #indexVal = items.index(string)
+#            #tempStrint += [[strintVal, indexVal]]
+#            newList.append(items)
+#            curIndex += 1
+
+##############################################
+## PART 2 ##
+##############################################
+
+eData = open('AOC23\\D1_QData.txt')
+#eData = open('AOC23\\D1_ExampleData.txt')
+eList = []
+for item in eData:    
+    eList.append(item.strip())
+
+eStrings = ['one','two','three','four','five','six','seven','eight','nine']
+noMatch = 0
+totalSum = 0
+curIndex = 0
+
 for items in eList:   
     print(items)         
     eStrints1 = []
@@ -216,10 +233,4 @@ for items in eList:
     print(tempStrint)
     print(eStrints1)
 
-
-#51479??
-
-for string in eStrings:
-    while string in test:
-        newItem = test.replace(string, str(eStrings.index(string) + 1))
-        test = newItem
+#51479
