@@ -60,9 +60,12 @@ for items in eList:
         print(eStrints1Sum)
         totalSum += int(eStrints1Sum)
     elif len(tempStrint) == 1:
-        eStrints1 = tempStrint
-        print(int(tempStrint[0][0]))
-        totalSum += int(tempStrint[0][0])
+            eStrints1 = tempStrint
+            eStrints1Sum = ''
+            eStrints1Sum += eStrints1[0][0]
+            eStrints1Sum += eStrints1[0][0]
+            print(eStrints1Sum)
+            totalSum += int(eStrints1Sum)
     print(tempStrint)
     print(eStrints1)
 
